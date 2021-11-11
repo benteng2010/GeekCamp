@@ -26,7 +26,7 @@ func main() {
 		handler: f2,
 	}
 
-	servers := []*Server{
+	_ := []*Server{
 		route_1,
 		route_2,
 	}
@@ -42,5 +42,3 @@ func f2(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "Hello f2")
 }
 
-
-https://benteng2010:123456@github.com
