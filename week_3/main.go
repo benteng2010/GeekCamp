@@ -43,7 +43,7 @@ func main() {
 	wg := sync.WaitGroup{}
 
 	//定义信号量
-	quitSign := make(chan os.Signal)
+	quitSign := make(chan os.Signal, 1)
 	signal.Notify(quitSign, os.Interrupt, syscall.SIGTERM, syscall.SIGTSTP)
 	defer signal.Stop(quitSign)
 
